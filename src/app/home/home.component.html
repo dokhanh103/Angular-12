@@ -1,6 +1,9 @@
 
 <div id="test">
     <p>A red shadow.</p>
-    <h2>Đây là component Home!</h2>
-    <p>Thêm hàng thứ 2 trong home</p>
+    <h2>Chào bạn {{name}}!</h2>
+    <input value={{name}}/>
+    <br>
+    <input [value]="name" title="Đây là {{name}}"/><br>
+    <input [value]="name" [title]="'Đây là ' + name"/>
 </div>
