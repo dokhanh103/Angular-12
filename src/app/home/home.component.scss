@@ -1,6 +1,18 @@
 #test {
     border: 1px solid;
     padding: 10px;
-    box-shadow: 5px 10px blue;
+    box-shadow: 5px 10px red;
     width: 400px
+  }
+
+  #table2 {
+    border-collapse: collapse;
+  }
+
+  table, td, th {
+    border: 1px solid black;
+  }
+
+  .so-am{
+    color: red;
   }

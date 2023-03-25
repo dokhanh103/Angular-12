@@ -1,7 +1,26 @@
 
 <div id="test">
     <h2>Chào bạn {{name}}!</h2>
-    <input type="text"  [(ngModel)]="name"/>
+    <input type="text" [(ngModel)]="name"/>
     <br>
     <button (click)="resetName()">Reset Name</button>
+
+    <div *ngFor="let trai of traiCay; let i= index">
+        <li>{{i}}. {{trai}}</li>
+    </div>
+
+    <table id="table2">
+        <tr>
+            <th>Thứ tự</th>
+            <th>Tên</th>
+            <th>Giá</th>
+            <th>Khuyến mại</th>
+        </tr>
+        <tr *ngFor="let trai of traiCay2; let i= index">
+            <td>{{i+1}}</td>
+            <td>{{trai.ten}}</td>
+            <td [ngClass]="{'so-am':trai.gia < 0}">{{trai.gia}}</td>
+            <td *ngIf="trai.haGia">Đang hạ giá</td>
+        </tr>
+    </table>
 </div>
